@@ -78,7 +78,6 @@ namespace HomeBudget.Application.Services
 
                 // We don't really want to delete the category from the database,
                 // because that would break all already existing references.
-                // Mark it as deleted, instead.
                 category.IsArchived = true;
 
                 await _context.SaveChangesAsync(cancellationToken);
